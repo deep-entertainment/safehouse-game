@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://addons/escoria-core/game/core-scripts/esc_room.gd" type="Script" id=1]
 [ext_resource path="res://game/rooms/bedroom/background0001.png" type="Texture" id=2]
@@ -18,15 +18,6 @@
 [ext_resource path="res://game/rooms/bedroom/background0010.png" type="Texture" id=16]
 [ext_resource path="res://game/rooms/bedroom/background0004.png" type="Texture" id=17]
 [ext_resource path="res://game/rooms/bedroom/background0007.png" type="Texture" id=18]
-[ext_resource path="res://game/rooms/bedroom/lightmap0002.png" type="Texture" id=19]
-[ext_resource path="res://game/rooms/bedroom/lightmap0008.png" type="Texture" id=20]
-[ext_resource path="res://game/rooms/bedroom/lightmap0010.png" type="Texture" id=21]
-[ext_resource path="res://game/rooms/bedroom/lightmap0003.png" type="Texture" id=22]
-[ext_resource path="res://game/rooms/bedroom/lightmap0007.png" type="Texture" id=23]
-[ext_resource path="res://game/rooms/bedroom/lightmap0006.png" type="Texture" id=24]
-[ext_resource path="res://game/rooms/bedroom/lightmap0009.png" type="Texture" id=25]
-[ext_resource path="res://game/rooms/bedroom/lightmap0005.png" type="Texture" id=26]
-[ext_resource path="res://game/rooms/bedroom/lightmap0004.png" type="Texture" id=27]
 
 [sub_resource type="AnimatedTexture" id=1]
 flags = 4
@@ -56,29 +47,6 @@ vertices = PoolVector2Array( 1507.48, 851.383, 1923.22, 846.712, 1920.65, 1074.6
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6 ), PoolIntArray( 7, 8, 0, 6 ), PoolIntArray( 4, 9, 5 ), PoolIntArray( 10, 6, 5 ), PoolIntArray( 11, 10, 5 ), PoolIntArray( 11, 5, 12 ) ]
 outlines = [ PoolVector2Array( 1334.65, 810.511, 1202.22, 865.163, 970.301, 872.404, 651.494, 867.732, 478.661, 846.712, 273.13, 908.605, 191.384, 882.914, 10.1432, 946.208, 6.63983, 1075.83, 1920.65, 1074.66, 1923.22, 846.712, 1507.48, 851.383, 1485.3, 808.175 ) ]
 
-[sub_resource type="AnimatedTexture" id=3]
-flags = 4
-frames = 10
-frame_0/texture = ExtResource( 5 )
-frame_1/texture = ExtResource( 19 )
-frame_1/delay_sec = 0.0
-frame_2/texture = ExtResource( 22 )
-frame_2/delay_sec = 0.0
-frame_3/texture = ExtResource( 27 )
-frame_3/delay_sec = 0.0
-frame_4/texture = ExtResource( 26 )
-frame_4/delay_sec = 0.0
-frame_5/texture = ExtResource( 24 )
-frame_5/delay_sec = 0.0
-frame_6/texture = ExtResource( 23 )
-frame_6/delay_sec = 0.0
-frame_7/texture = ExtResource( 20 )
-frame_7/delay_sec = 0.0
-frame_8/texture = ExtResource( 25 )
-frame_8/delay_sec = 0.0
-frame_9/texture = ExtResource( 21 )
-frame_9/delay_sec = 0.0
-
 [node name="ESCRoom" type="Node2D"]
 script = ExtResource( 1 )
 global_id = "bedroom"
@@ -101,6 +69,7 @@ script = ExtResource( 6 )
 scales = ExtResource( 4 )
 scale_min = 0.2
 scale_max = 0.6
+lightmap = ExtResource( 5 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="ESCTerrain"]
 position = Vector2( -1.16772, 0 )
@@ -144,8 +113,3 @@ polygon = PoolVector2Array( 159.859, -2.27179, 152.853, 427.475, -2.46362, 428.6
 
 [node name="Position2D" type="Position2D" parent="DoorExit"]
 position = Vector2( 0, -25.6914 )
-
-[node name="Light2D" type="Light2D" parent="."]
-texture = SubResource( 3 )
-offset = Vector2( 960, 540 )
-mode = 2

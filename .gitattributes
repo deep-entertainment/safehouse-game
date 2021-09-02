@@ -1,4 +1,2 @@
-*.png filter=lfs diff=lfs merge=lfs -text
-games/room/room* filter= diff= merge= text
 game/rooms/bedroom/*.png filter=lfs diff=lfs merge=lfs -text
 game/characters/marjorie/*.png filter=lfs diff=lfs merge=lfs -text
