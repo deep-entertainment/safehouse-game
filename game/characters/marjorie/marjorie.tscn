@@ -1,14 +1,14 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://game/characters/marjorie/frames.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://addons/escoria-core/game/core-scripts/esc_player.gd" type="Script" id=2]
 [ext_resource path="res://game/characters/marjorie/animations_default.tres" type="Resource" id=3]
 
-[sub_resource type="CapsuleShape2D" id=26]
+[sub_resource type="CapsuleShape2D" id=1]
 radius = 302.193
 height = 389.246
 
-[sub_resource type="Animation" id=27]
+[sub_resource type="Animation" id=2]
 resource_name = "backward"
 loop = true
 tracks/0/type = "value"
@@ -36,7 +36,35 @@ tracks/1/keys = {
 "values": [ 0, 28 ]
 }
 
-[sub_resource type="Animation" id=28]
+[sub_resource type="Animation" id=18]
+resource_name = "backward_suitcase"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "walk_suitcase_Back" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 20 ]
+}
+
+[sub_resource type="Animation" id=3]
 resource_name = "backwardleft"
 loop = true
 tracks/0/type = "value"
@@ -64,7 +92,35 @@ tracks/1/keys = {
 "values": [ 0, 28 ]
 }
 
-[sub_resource type="Animation" id=29]
+[sub_resource type="Animation" id=19]
+resource_name = "backwardleft_suitcase"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "walk_suitcase_BackLeft" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 20 ]
+}
+
+[sub_resource type="Animation" id=4]
 resource_name = "backwardright"
 loop = true
 tracks/0/type = "value"
@@ -92,7 +148,35 @@ tracks/1/keys = {
 "values": [ 0, 28 ]
 }
 
-[sub_resource type="Animation" id=30]
+[sub_resource type="Animation" id=20]
+resource_name = "backwardright_suitcase"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "walk_suitcase_BackRight" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 20 ]
+}
+
+[sub_resource type="Animation" id=5]
 resource_name = "forward"
 loop = true
 tracks/0/type = "value"
@@ -120,7 +204,35 @@ tracks/1/keys = {
 "values": [ 0, 28 ]
 }
 
-[sub_resource type="Animation" id=31]
+[sub_resource type="Animation" id=21]
+resource_name = "forward_suitcase"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "walk_suitcase_Front" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 20 ]
+}
+
+[sub_resource type="Animation" id=6]
 resource_name = "forwardleft"
 loop = true
 tracks/0/type = "value"
@@ -148,7 +260,35 @@ tracks/1/keys = {
 "values": [ 0, 28 ]
 }
 
-[sub_resource type="Animation" id=32]
+[sub_resource type="Animation" id=22]
+resource_name = "forwardleft_suitcase"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "walk_suitcase_FrontLeft" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 20 ]
+}
+
+[sub_resource type="Animation" id=7]
 resource_name = "forwardright"
 loop = true
 tracks/0/type = "value"
@@ -176,7 +316,35 @@ tracks/1/keys = {
 "values": [ 0, 28 ]
 }
 
-[sub_resource type="Animation" id=33]
+[sub_resource type="Animation" id=23]
+resource_name = "forwardright_suitcase"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "walk_suitcase_FrontRight" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 20 ]
+}
+
+[sub_resource type="Animation" id=8]
 resource_name = "idlebackward"
 length = 14.0
 loop = true
@@ -205,7 +373,7 @@ tracks/1/keys = {
 "values": [ 0, 1, 1, 2, 6, 6, 9, 9, 9, 14, 16, 19 ]
 }
 
-[sub_resource type="Animation" id=34]
+[sub_resource type="Animation" id=9]
 resource_name = "idlebackwardleft"
 length = 14.0
 loop = true
@@ -234,7 +402,7 @@ tracks/1/keys = {
 "values": [ 0, 1, 1, 2, 6, 6, 9, 9, 9, 14, 16, 19 ]
 }
 
-[sub_resource type="Animation" id=35]
+[sub_resource type="Animation" id=10]
 resource_name = "idlebackwardright"
 length = 14.0
 loop = true
@@ -263,7 +431,7 @@ tracks/1/keys = {
 "values": [ 0, 1, 1, 2, 6, 6, 9, 9, 9, 14, 16, 19 ]
 }
 
-[sub_resource type="Animation" id=36]
+[sub_resource type="Animation" id=11]
 resource_name = "idleforward"
 length = 14.0
 loop = true
@@ -292,7 +460,7 @@ tracks/1/keys = {
 "values": [ 0, 1, 1, 2, 6, 6, 9, 9, 9, 14, 16, 19 ]
 }
 
-[sub_resource type="Animation" id=37]
+[sub_resource type="Animation" id=12]
 resource_name = "idleforwardleft"
 length = 14.0
 loop = true
@@ -321,7 +489,7 @@ tracks/1/keys = {
 "values": [ 0, 1, 1, 2, 6, 6, 9, 9, 9, 14, 16, 19 ]
 }
 
-[sub_resource type="Animation" id=38]
+[sub_resource type="Animation" id=13]
 resource_name = "idleforwardright"
 length = 14.0
 loop = true
@@ -350,7 +518,7 @@ tracks/1/keys = {
 "values": [ 0, 1, 1, 2, 6, 6, 9, 9, 9, 14, 16, 19 ]
 }
 
-[sub_resource type="Animation" id=39]
+[sub_resource type="Animation" id=14]
 resource_name = "idleleft"
 length = 14.0
 loop = true
@@ -379,7 +547,7 @@ tracks/1/keys = {
 "values": [ 0, 1, 1, 2, 6, 6, 9, 9, 9, 14, 16, 19 ]
 }
 
-[sub_resource type="Animation" id=40]
+[sub_resource type="Animation" id=15]
 resource_name = "idleright"
 length = 14.0
 loop = true
@@ -408,7 +576,7 @@ tracks/1/keys = {
 "values": [ 0, 1, 1, 2, 6, 6, 9, 9, 9, 14, 16, 19 ]
 }
 
-[sub_resource type="Animation" id=41]
+[sub_resource type="Animation" id=16]
 resource_name = "left"
 loop = true
 tracks/0/type = "value"
@@ -436,7 +604,35 @@ tracks/1/keys = {
 "values": [ 0, 28 ]
 }
 
-[sub_resource type="Animation" id=42]
+[sub_resource type="Animation" id=24]
+resource_name = "left_suitcase"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "walk_suitcase_Left" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 20 ]
+}
+
+[sub_resource type="Animation" id=17]
 resource_name = "right"
 loop = true
 tracks/0/type = "value"
@@ -464,40 +660,78 @@ tracks/1/keys = {
 "values": [ 0, 28 ]
 }
 
+[sub_resource type="Animation" id=25]
+resource_name = "right_suitcase"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "walk_suitcase_Right" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 20 ]
+}
+
 [node name="ESCPlayer" type="Area2D"]
+pause_mode = 1
 script = ExtResource( 2 )
-global_id = "player"
+global_id = "marjorie"
 is_movable = true
 dialog_color = Color( 1, 1, 1, 1 )
 speed = 1900
+animation_player_node = NodePath("animations")
 animations = ExtResource( 3 )
 
 [node name="sprite" type="AnimatedSprite" parent="."]
 position = Vector2( -424.026, -912.283 )
 frames = ExtResource( 1 )
-animation = "idle_Right"
+animation = "walk_Right"
 speed_scale = 3.0
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -30.231, -449.55 )
-shape = SubResource( 26 )
+shape = SubResource( 1 )
 
 [node name="animations" type="AnimationPlayer" parent="."]
 playback_speed = 1.2
-anims/backward = SubResource( 27 )
-anims/backwardleft = SubResource( 28 )
-anims/backwardright = SubResource( 29 )
-anims/forward = SubResource( 30 )
-anims/forwardleft = SubResource( 31 )
-anims/forwardright = SubResource( 32 )
-anims/idlebackward = SubResource( 33 )
-anims/idlebackwardleft = SubResource( 34 )
-anims/idlebackwardright = SubResource( 35 )
-anims/idleforward = SubResource( 36 )
-anims/idleforwardleft = SubResource( 37 )
-anims/idleforwardright = SubResource( 38 )
-anims/idleleft = SubResource( 39 )
-anims/idleright = SubResource( 40 )
-anims/left = SubResource( 41 )
-anims/right = SubResource( 42 )
+anims/backward = SubResource( 2 )
+anims/backward_suitcase = SubResource( 18 )
+anims/backwardleft = SubResource( 3 )
+anims/backwardleft_suitcase = SubResource( 19 )
+anims/backwardright = SubResource( 4 )
+anims/backwardright_suitcase = SubResource( 20 )
+anims/forward = SubResource( 5 )
+anims/forward_suitcase = SubResource( 21 )
+anims/forwardleft = SubResource( 6 )
+anims/forwardleft_suitcase = SubResource( 22 )
+anims/forwardright = SubResource( 7 )
+anims/forwardright_suitcase = SubResource( 23 )
+anims/idlebackward = SubResource( 8 )
+anims/idlebackwardleft = SubResource( 9 )
+anims/idlebackwardright = SubResource( 10 )
+anims/idleforward = SubResource( 11 )
+anims/idleforwardleft = SubResource( 12 )
+anims/idleforwardright = SubResource( 13 )
+anims/idleleft = SubResource( 14 )
+anims/idleright = SubResource( 15 )
+anims/left = SubResource( 16 )
+anims/left_suitcase = SubResource( 24 )
+anims/right = SubResource( 17 )
+anims/right_suitcase = SubResource( 25 )
