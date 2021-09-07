@@ -1,0 +1,6 @@
+:setup
+	teleport player start
+	# Set player look left
+	set_angle player 270
+	stop
+

@@ -1,0 +1,67 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://addons/escoria-core/game/core-scripts/esc_room.gd" type="Script" id=1]
+[ext_resource path="res://game/rooms/bedroom/background0001.png" type="Texture" id=2]
+[ext_resource path="res://addons/escoria-core/game/core-scripts/esc_background.gd" type="Script" id=3]
+[ext_resource path="res://game/rooms/bedroom/scalemap0001.png" type="Texture" id=4]
+[ext_resource path="res://game/rooms/bedroom/lightmap0001.png" type="Texture" id=5]
+[ext_resource path="res://addons/escoria-core/game/core-scripts/esc_terrain.gd" type="Script" id=6]
+[ext_resource path="res://game/characters/marjorie/marjorie.tscn" type="PackedScene" id=7]
+[ext_resource path="res://addons/escoria-core/game/core-scripts/esc_item.gd" type="Script" id=8]
+[ext_resource path="res://game/rooms/bedroom/foreground0001.png" type="Texture" id=9]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 1202.22, 865.163, 1509.35, 859.324, 1911.31, 855.12, 1920.65, 1074.66, 6.63983, 1075.83, 982.679, 895.526, 10.1432, 946.208, 411.63, 863.996, 698.906, 878.009, 1335.35, 819.619 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5 ), PoolIntArray( 4, 6, 7, 8, 5 ), PoolIntArray( 0, 9, 1 ) ]
+outlines = [ PoolVector2Array( 1335.35, 819.619, 1202.22, 865.163, 982.679, 895.526, 698.906, 878.009, 411.63, 863.996, 10.1432, 946.208, 6.63983, 1075.83, 1920.65, 1074.66, 1911.31, 855.12, 1509.35, 859.324 ) ]
+
+[node name="ESCRoom" type="Node2D"]
+script = ExtResource( 1 )
+global_id = "bedroom"
+esc_script = "res://game/rooms/bedroom/bedroom.esc"
+player_scene = ExtResource( 7 )
+camera_limits = [ Rect2( 0, 0, 1920, 1080 ) ]
+
+[node name="ESCBackground" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ESCTerrain" type="Navigation2D" parent="."]
+script = ExtResource( 6 )
+scales = ExtResource( 4 )
+scale_min = 0.2
+scale_max = 0.8
+lightmap = ExtResource( 5 )
+debug_mode = 1
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="ESCTerrain"]
+visible = false
+position = Vector2( -1.16772, 0 )
+navpoly = SubResource( 1 )
+
+[node name="ESCItem" type="Area2D" parent="."]
+script = ExtResource( 8 )
+global_id = "start"
+tooltip_name = "Start"
+dialog_color = Color( 1, 1, 1, 1 )
+
+[node name="start" type="Position2D" parent="ESCItem"]
+position = Vector2( 1334.78, 887.521 )
+
+[node name="Foreground" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="ForegroundPic" type="TextureRect" parent="Foreground"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+mouse_filter = 2
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

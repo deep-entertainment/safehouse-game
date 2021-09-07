@@ -1,38 +1,4 @@
 :start
 
-# 1/ Simple scene
-change_scene res://game/rooms/room01/room01.tscn
-
-# 2/ Button bridge
-#change_scene res://game/rooms/room02/room02.tscn
-
-# 3/ Broken button
-#change_scene res://game/rooms/room03/room03.tscn
-
-# 4/ wide room
-#change_scene res://game/rooms/room04/room04.tscn
-
-# 5/ items rooms
-#change_scene res://game/rooms/room05/room05.tscn
-
-# 6/ character room
-#change_scene res://game/rooms/room06/room06.tscn
-
-# 7/ long room with camera shift to object 2 if look on object 1
-# and stairs with camera shift too
-#change_scene res://game/rooms/room07/room07.tscn
-
-# 8/ puzzle in superposed scene
-#change_scene res://game/rooms/room08/room08.tscn
-
-# 9/ Indy4 3 closets
-#change_scene res://game/rooms/room09/room09.tscn
-
-# 10/ 
-#change_scene res://game/rooms/room10/room10.tscn
-
-# 11/ Event flags tests
-#change_scene res://game/rooms/room11/room11.tscn
-
-# 12/ Event flags tests 2
-#change_scene res://game/rooms/room12/room12.tscn
+change_scene res://game/rooms/bedroom/bedroom.tscn
+#change_scene res://game/rooms/room1/room1.tscn
