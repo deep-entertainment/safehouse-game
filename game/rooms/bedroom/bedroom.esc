@@ -1,8 +1,0 @@
-:setup
-	teleport marjorie start_behind_door
-	set_animations marjorie res://game/characters/marjorie/animations_with_suitcase.tres
-
-:ready
-	walk_block marjorie stand_before_bed
-	set_angle marjorie 180
-	#set_animations marjorie res://game/characters/marjorie/animations_default.tres

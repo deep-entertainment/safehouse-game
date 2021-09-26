@@ -1,5 +1,0 @@
-:look
-say player "That's the other side."
-
-:arrived
-say player "I can't reach it."
